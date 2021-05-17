@@ -19,8 +19,8 @@ hasDriverLicense = prompt("Do you have a Valid Driver's License? (y or n): ");
 //if (driver === "y") hasDriverLicense = true;
 
 // if (hasDriverLicense) {
-if (hasDriverLicense === "y") {
+if (hasDriverLicense === "y" || hasDriverLicense === "Y") {
   isSober = prompt("Are you sober? (y or n): ");
-  if (isSober === "y") console.log("Can drive");
+  if (isSober === "y" || isSober === "Y") console.log("Can drive");
   else console.log("Cannot drive");
 } else console.log("Cannot drive");
