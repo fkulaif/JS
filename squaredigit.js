@@ -1,39 +1,34 @@
-// let num = [3, 2, 1, 2];
-let num = 3212;
-num = num.toString();
-console.log(Array.from(num));
+let num = 3212; // let num = [3, 2, 1, 2];
+console.log(num);
 
-// function toArray(num) {
-//   //   return [...num];
-//   return Array.from(num);
-// }
-// console.log(toArray(1234));
+num = num.toString(); //parse needed for Array.from
+console.log(num);
+let arrNum = Array.from(num);
+console.log(typeof arrNum); //object
+console.log(arrNum);
 
-// let strSplit = num.split(",");
-// var res = str.split(',');
+console.log(squareDigits(num)); //NaN while an object
 
-let res = [];
+function squareDigits(arrNum) {
+  let res = [];
+  var i;
+  for (i = 0; i < arrNum.length; i++) {
+    res[i] = arrNum[i] ** 2; //object
+  }
+  res = res.toString();
+  res = res.replaceAll(",", "");
+  return Number(res);
+  // function toArray(num) {
+  //   //   return [...num];
+  // }
+  // console.log(toArray(1234));
+}
 
 // console.log(num.length);
-//console.log(num[0]);
+// console.log(num[0]);
 // console.log(num[2] ** 2);
 // res = num[2] ** 2;
 // res[0] = num[1]; //2
 // res[0] = num[2] ** 2;
 // console.log(res[0]);
 // console.log(res.toString());
-console.log(squareDigits(num));
-
-function squareDigits(num) {
-  var i;
-  for (i = 0; i < num.length; i++) {
-    res[i] = num[i] ** 2;
-    // text += cars[i] + "<br>";
-  }
-  res = res.toString(); //1,4,9
-  var j;
-  for (j = 0; j < res.length; j++) {
-    res = res.replace(",", "");
-  }
-  return Number(res);
-}
