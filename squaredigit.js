@@ -1,4 +1,3 @@
-console.log(squareDigits(123));
 function squareDigits(num) {
   num = num.toString();
   let arrNum = Array.from(num);
