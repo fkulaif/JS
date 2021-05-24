@@ -1,5 +1,6 @@
+const a = 1;
+const b = 2;
 // (a, b) => a + b;
-// console.log(2, 1);
-console.log("Hello");
+console.log(a + b);
 
-// [1, 2].map((n) => n + 1);
+// arr.map(1) n => (n + 1);
